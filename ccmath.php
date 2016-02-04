@@ -4,7 +4,7 @@
  * @return array
  */
 function randoms() {
-    $max = 10000000;
+    $max = 1000;
     $arr = [rand(1, $max), rand(1, $max)];
     rsort($arr);
 
@@ -104,11 +104,11 @@ echo implode($nums[0]) . " - " . implode($nums[1]) . " = " . $cc . " (cc = " . $
 // ===================================================================================================
 // Uncomment this block if you want to test a lot.
 
-$cycles = 100000000;
+$cycles = 1000;
 $owtime = 0;
 $cctime = 0;
 
-echo "Running each way through " . number_format($cycles) . " random cycles.<br>";
+echo number_format($cycles) . " cycles - random numbers between 1 and 1000.<br>";
 for ($i=0; $i < $cycles; $i++) {
     $nums = randoms();
 
